@@ -18,4 +18,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2083-three-divisors](https://github.com/devyansh7887/My_LeetCode_Journey/tree/master/2083-three-divisors) |
+## Array
+|  |
+| ------- |
+| [0001-two-sum](https://github.com/devyansh7887/My_LeetCode_Journey/tree/master/0001-two-sum) |
+## Hash Table
+|  |
+| ------- |
+| [0001-two-sum](https://github.com/devyansh7887/My_LeetCode_Journey/tree/master/0001-two-sum) |
 <!---LeetCode Topics End-->
