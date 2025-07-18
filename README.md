@@ -22,6 +22,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/devyansh7887/My_LeetCode_Journey/tree/master/0001-two-sum) |
+| [0027-remove-element](https://github.com/devyansh7887/My_LeetCode_Journey/tree/master/0027-remove-element) |
 | [2212-removing-minimum-and-maximum-from-array](https://github.com/devyansh7887/My_LeetCode_Journey/tree/master/2212-removing-minimum-and-maximum-from-array) |
 ## Hash Table
 |  |
@@ -31,4 +32,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2212-removing-minimum-and-maximum-from-array](https://github.com/devyansh7887/My_LeetCode_Journey/tree/master/2212-removing-minimum-and-maximum-from-array) |
+## Two Pointers
+|  |
+| ------- |
+| [0027-remove-element](https://github.com/devyansh7887/My_LeetCode_Journey/tree/master/0027-remove-element) |
 <!---LeetCode Topics End-->
