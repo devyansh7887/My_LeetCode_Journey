@@ -9,7 +9,7 @@ class Solution {
                  reversed += clean.charAt(i);
             }
         }
-        if(!reversed.equals(clean)){
+        if(!reversed.equals(clean)){//worthy
             return false;
         }
         return true;
