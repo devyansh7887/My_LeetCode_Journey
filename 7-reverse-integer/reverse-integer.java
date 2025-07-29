@@ -1,22 +1,25 @@
 class Solution {
     public int reverse(int x) {
-        int num = Math.abs(x);  // Original number ka absolute value nikala
-        
-        int rev = 0;  // Reversed number
-        
-        while (num != 0) {
-            int ld = num % 10;  // Last digit nikala
-            
+        int num = Math.abs(x);
+        int rev=0;
+        int a = num;
+        int b;
+        while(a>0)
+        { 
+            b=a%10;
             // Overflow check
-            if (rev > (Integer.MAX_VALUE - ld) / 10) {
-                return 0;  // Agar overflow hua, toh 0 return kardo
+            if (rev > (Integer.MAX_VALUE - b)/ 10) 
+            {
+                return 0;  
             }
-            
-            rev = rev * 10 + ld;  // Reverse mein digit ko add kiya
-            num = num / 10;  // Last digit hata diya, next iteration ke liye
+            rev=rev*10+b;
+            a=a/10;
+           
         }
+        if(x<0)
+        return -rev;
+        else
+        return rev;
         
-        return (x < 0) ? (-rev) : rev;  // Original number ke sign ke hisaab se result diya
     }
 }
-// GUYS ACCHA LAGA TO UPVOTE KARANA !!!!\U0001f60a
