@@ -8,7 +8,7 @@ class Solution {
         }
         // Add the Elements back to the array
         for(int i = 0; i < list.size(); i++){
-            nums[i] = list.get(i);
+            nums[i] = list.get(i); // 
         }
         // Return the length of the arraylist
         return list.size();
