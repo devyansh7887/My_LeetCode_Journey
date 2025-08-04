@@ -7,7 +7,7 @@ class Solution {
             if(nums[i] == 1){
                 c++;
             }else{
-                count = Math.max(c,count);
+                count = Math.max(c,count); // Accepted after debugging
                 c = 0;
             }
         }
