@@ -13,3 +13,5 @@ class Solution {
         return arr; // will return default if not found (not recommended)
     }
 }
+// okokok
+// Better approach : Two pointer method
