@@ -3,7 +3,6 @@ class Solution {
         int n = nums.length;
         List<List<Integer>> outerList = new ArrayList<>();
         Arrays.sort(nums);
-
         for (int a = 0; a < n; a++) {
             if (a > 0 && nums[a] == nums[a - 1]) continue;  // skip duplicates for a
             for (int b = a + 1; b < n; b++) {
@@ -11,7 +10,6 @@ class Solution {
                 int c = b + 1, d = n - 1;
                 while (c < d) {
                     long sum = (long) nums[a] + nums[b] + nums[c] + nums[d]; // Use long to avoid overflow
-
                     if (sum < target) {
                         c++;
                     } else if (sum > target) {
