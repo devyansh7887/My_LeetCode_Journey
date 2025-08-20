@@ -16,9 +16,6 @@ class Solution {
                     k--;
                 }else{
                     ArrayList<Integer> innerList = new ArrayList<>(Arrays.asList(nums[i], nums[j], nums[k]));
-                    // if(!outerList.contains(innerList)){
-                    //     outerList.add(innerList);
-                    // }
                     outerList.add(innerList);
                     j++;
                     k--;
