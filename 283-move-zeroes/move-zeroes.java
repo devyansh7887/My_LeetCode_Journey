@@ -14,6 +14,8 @@ class Solution {
         // while(pos<n){
         //     nums[pos++] = 0;
         // }
+
+        
         //<--------Optimised approach---------->
         //Two pointers
         int j = -1;
