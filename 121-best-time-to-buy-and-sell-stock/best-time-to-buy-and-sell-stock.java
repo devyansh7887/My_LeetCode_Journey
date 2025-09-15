@@ -12,3 +12,4 @@ class Solution {
         return diff;
     }
 }
+// I couldn't think of this approach 
