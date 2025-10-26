@@ -7,8 +7,8 @@ class Solution {
                 jumps++;
                 currentEnd = farthest;
             }
-        }
+        }//
         return jumps;
     }
-    //
+    ////
 }
