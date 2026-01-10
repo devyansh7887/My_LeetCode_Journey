@@ -6,7 +6,7 @@ class Solution {
             if (i == currentEnd) {
                 jumps++;
                 currentEnd = farthest;
-            }
+            }//
         }//
         return jumps;
     }
