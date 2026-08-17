@@ -24,11 +24,20 @@ class Solution {
         // TLE
 
         //Approach#3 : Sorting
-        Arrays.sort(nums);
-        for(int i = 0; i<n-1; i++){
-            if(nums[i] == nums[i+1]) return true;
-        }
-        return false;
+        // Arrays.sort(nums);
+        // for(int i = 0; i<n-1; i++){
+        //     if(nums[i] == nums[i+1]) return true;
+        // }
+        // return false;
         // TC : O(N) 
+        // ACCEPTED
+
+        // Approach#4 : OPTIMAL : HASHSET
+        HashSet<Integer> set = new HashSet<>();
+        for(int i = 0; i<n; i++){
+            set.add(nums[i]);
+        }
+        if(set.size() == n) return false;
+        else return true;
     }
 }
