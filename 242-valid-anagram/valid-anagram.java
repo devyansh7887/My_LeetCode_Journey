@@ -28,7 +28,8 @@ class Solution {
                 return false;
             }
         }
-
         return true;
+        // TC : O(N)
+        // ACCEPTED 
     }
 }
