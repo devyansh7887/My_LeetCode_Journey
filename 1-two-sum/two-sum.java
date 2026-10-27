@@ -1,17 +1,17 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        int[] arr = new int[2]; // made a new array that needs to be returned
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i; j < nums.length; j++) {
-                if (i != j && nums[i] + nums[j] == target) {
-                    arr[0] = i;
-                    arr[1] = j;
-                    return arr; // return as soon as found
+        // TWO POINTER APPROACH
+        int n = nums.length;
+        int[] ans = new int[2];
+        for(int i = 0; i<n-1; i++){
+            for(int j = i+1; j<n; j++){
+                if(nums[i] + nums[j] == target){
+                    ans[0] = i;
+                    ans[1] = j;
+                    break;
                 }
             }
         }
-        return arr; // will return default if not found (not recommended)
+        return ans;
     }
 }
-// okokok
-// Better approach : Two pointer method
