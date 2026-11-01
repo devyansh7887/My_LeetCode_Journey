@@ -1,26 +1,23 @@
 class Solution {
     public int longestConsecutive(int[] nums) {
-        // <--------BRUTE FORCE APPROACH---------->
-        // Create an arraylist and copy all elements of the array onto it.
-        // Then check wheteher for any number its consecutive number exists or not.
-        // EXCEEDS TIME LIMIT : O(N LOGN)
-        // <-----------BETTER APPROACH------------>
-        // 
-        Arrays.sort(nums);
+        //OPTIMAL SOLUTION
         int n = nums.length;
-        int currCount = 1;
-        int lastSmaller = Integer.MIN_VALUE;
-        int largest = 0;
-        for(int i = 0; i< n; i++){
-            if(nums[i] - 1 == lastSmaller){
-                currCount++;
-                lastSmaller++;
-            }else if(nums[i] != lastSmaller){
-                currCount = 1;
-                lastSmaller = nums[i];
-            }
-            largest = Math.max(largest, currCount); 
+        Set<Integer> set = new HashSet<>();
+        for(int i : nums){
+            set.add(i);
         }
-        return largest;
+        int longest = 0;
+        for(int i: set){
+            if(!set.contains(i-1)){
+                int length = 1;
+                int current = i;
+                while(set.contains(current+1)){
+                    current++;
+                    length++;
+                }
+                longest = Math.max(longest, length);
+            }
+        }
+        return longest;
     }
 }
