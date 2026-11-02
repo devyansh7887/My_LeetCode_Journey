@@ -1,17 +1,18 @@
 class Solution {
     public int[] productExceptSelf(int[] nums) {
+        //OPTIMAL APPROACH : PREFIX/SUFFIX SUM
         int n = nums.length;
-        int[] res = new int[n];
+        int[] result = new int[n];
         int p = 1;
+        int s = 1;
         for(int i = 0; i<n; i++){
-            res[i] = p;
+            result[i] = p;
             p *= nums[i];
         }
-        int s = 1;
-        for(int i = n-1; i>=0; i--){
-            res[i] *= s;
-            s *= nums[i];
+        for(int j = n-1; j>=0; j--){
+            result[j] *= s;
+            s *= nums[j];
         }
-        return res;
+        return result;
     }
 }
