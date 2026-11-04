@@ -1,26 +1,25 @@
 class Solution {
     public int trap(int[] height) {
-        // By Intuition:
-        // Water trapped at i =
-        // min(max_left[i], max_right[i]) - height[i]
         int n = height.length;
-        int left = 0, right = n - 1;
-        int left_max = 0, right_max = 0;
-        int water = 0;
-        while(left < right){
-            if(height[left] < height[right]){
-                if(height[left] >= left_max) left_max = height[left];
-                else{
-                    water += left_max - height[left];
-                }
-                left++;
-            }else{
-                if(height[right] >= right_max) right_max = height[right];
-                else{
-                    water += right_max - height[right];
-                }
-                right--;
+        int[] prefix = new int[n];
+        int[] suffix = new int[n];
+        int left_max = Integer.MIN_VALUE;
+        int right_max = Integer.MIN_VALUE;
+        for(int i = 0; i<n; i++){
+            prefix[i] = Math.max(left_max, height[i]);
+            if(left_max < height[i]){
+                left_max = height[i];
             }
+        }
+        for(int j = n-1; j>=0; j--){
+            suffix[j] = Math.max(right_max, height[j]);
+            if(right_max < height[j]){
+                right_max = height[j];
+            }
+        }
+        int water = 0;
+        for(int k = 0; k<n; k++){
+            water += Math.min(prefix[k], suffix[k]) - height[k];
         }
         return water;
     }
