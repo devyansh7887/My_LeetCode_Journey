@@ -1,19 +1,15 @@
 class Solution {
     public void sortColors(int[] nums) {
-        //Selection Sorting
+        // INSERTION SORT
         int n = nums.length;
-        for(int i = 0; i<n-1; i++){
-            int min = i; //Initialise a minimum index
-            //Now, find the minimum element's index
-            for(int j = i+1; j < n; j++){
-                if(nums[j] < nums[min]){
-                    min = j; 
-                }
+        for(int i = 1; i<n; i++){
+            int key = nums[i];
+            int j = i-1;
+            while(j>=0 && nums[j] > key){
+                nums[j+1] = nums[j];
+                j--;
             }
-            //Swapping
-            int temp = nums[min];
-            nums[min] = nums[i];
-            nums[i] = temp;
+            nums[j+1] = key;
         }
     }
 }
