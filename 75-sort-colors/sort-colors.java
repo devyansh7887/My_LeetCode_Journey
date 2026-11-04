@@ -1,15 +1,25 @@
 class Solution {
     public void sortColors(int[] nums) {
-        // INSERTION SORT
         int n = nums.length;
-        for(int i = 1; i<n; i++){
-            int key = nums[i];
-            int j = i-1;
-            while(j>=0 && nums[j] > key){
-                nums[j+1] = nums[j];
-                j--;
+        int i = 0;
+        int j = 0;
+        int k = n-1;
+        while(j<=k){
+            if(nums[j] == 0){
+                swap(nums, i, j);
+                j++;
+                i++;
+            }else if(nums[j] == 1){
+                j++;
+            }else{
+                swap(nums, j, k);
+                k--;
             }
-            nums[j+1] = key;
         }
+    }
+    public void swap (int[] nums, int m, int n){
+        int temp = nums[m];
+        nums[m] = nums[n];
+        nums[n] = temp;
     }
 }
